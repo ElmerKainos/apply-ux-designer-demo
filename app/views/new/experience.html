@@ -1,0 +1,68 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName = 'How many years of experience you have?' %}
+
+{% block beforeContent%}
+{{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+
+{% endblock%}
+
+
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+
+<form novalidate method="post" >
+
+{{ govukRadios({
+  id: "[new][experience]",
+  name: "[new][experience]",
+  fieldset: {
+    legend: {
+      text: pageName,
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  value: data.new.experience,
+  items: [
+    {
+      value: "1 - 3 years",
+      text: "1 - 3 years"
+    },
+    {
+      value: "3 or more",
+      text: "3"
+    },
+    {
+      value: "None",
+      text: "None"
+    }
+  ]
+}) }}
+
+
+
+
+
+{{ govukButton({
+  text: "Continue"
+}) }}
+
+    </form>
+
+  
+  
+  </div>
+</div>
+
+{% endblock %}
