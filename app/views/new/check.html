@@ -1,6 +1,6 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName = 'Check details and send your application ' %}
+{% set pageName = 'Check your details and send your application  ' %}
 
 {% block beforeContent%}
 {{ govukBackLink({
@@ -17,104 +17,14 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-<h1 class="govuk-heading-l"> {{pageName}} </h1>
+
 
 
 
 <form novalidate method="post" >
 
-{{ govukSummaryList({
-  rows: [
-    {
-      key: {
-        text: "Your email address"
-      },
-      value: {
-        text: data.new.emailAddress
-      },
-      actions: {
-        items: [
-          {
-            href: "/new/email-address",
-            text: "Change",
-            visuallyHiddenText: "Your email address"
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Your name "
-      },
-      value: {
-        text: data.new.firstName + ' ' + data.new.lastName
-      },
-      actions: {
-        items: [
-          {
-            href: "/new/name",
-            text: "Change",
-            visuallyHiddenText: "Your name "
-          }
-        ]
-      }
-    },
-    {
-      key: {
-        text: "Years of experience"
-      },
-      value: {
-        text: data.new.experience
-      },
-      actions: {
-        items: [
-          {
-            href: "/new/experience",
-            text: "Change",
-            visuallyHiddenText: "Years of experience"
-          }
-          
-        ]
-      }
-    }, 
-    {
-      key: {
-        text: "Your expertise"
-      },
-      value: {
-        text: data.new.expertise
-      },
-      actions: {
-        items: [
-          {
-            href: "/new/expertise",
-            text: "Change",
-            visuallyHiddenText: "Your expertise"
-          }
-          
-        ]
-      }
-    }, 
-    {
-      key: {
-        text: "Your skills"
-      },
-      value: {
-        text: data.new.skills
-      },
-      actions: {
-        items: [
-          {
-            href: "/new/skills",
-            text: "Change",
-            visuallyHiddenText: "Your skills"
-          }
-          
-        ]
-      }
-    }
-  ]
-}) }}
+
+
 
 
 
